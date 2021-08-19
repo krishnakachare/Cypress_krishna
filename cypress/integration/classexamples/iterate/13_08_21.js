@@ -232,6 +232,41 @@ describe('Iterate over the element', () => {
 //     })
 // })
 
+
+// it ("total no of fours",()=>{
+
+//     cy.visit("https://www.espncricinfo.com/series/india-tour-of-england-2021-1239527/england-vs-india-2nd-test-1239544/full-scorecard")
+
+//     let sum = 0
+
+//          cy.get('.batsman').first().find('td[class="font-weight-bold"]').next().next().next().each((el,index,arr)=>{
+//                 sum = sum + Number(el.text())
+
+//     }).then(()=>{
+//         cy.log(sum)
+//         expect(sum).to.eqls(36)
+    
+//     })
+// })
+
+
+
+// it.only("players played more than 100 balls",()=>{
+
+//     cy.visit("https://www.espncricinfo.com/series/india-tour-of-england-2021-1239527/england-vs-india-2nd-test-1239544/full-scorecard")
+
+//     let moreThan =[]
+//     cy.get('.batsman').first().find('td[class="font-weight-bold"]').next().each((el,index,arr)=>{
+
+//         if(Number(el.text()) > 100){
+//             moreThan.push(Number(el.text()))
+//         }
+// }).then(()=>{
+//         cy.log(moreThan)
+//         expect(moreThan.length).to.eqls(4)
+//     })
+// })
+
 // })
 
 
