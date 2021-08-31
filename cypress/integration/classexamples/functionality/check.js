@@ -1,6 +1,3 @@
-const cypress = require("cypress")
-const { it } = require("mocha")
-
 describe('verify checkbox functionality',()=>{
 
     it('verify checkbox with check ',()=>{
