@@ -1,0 +1,3 @@
+// And fixture folder is configurable and you can load file from any folder ...
+
+// disadvantages is if cypress library ...but can be achievable via js The cypress can be easily integrated with FE and BE that makes it grow rapidly

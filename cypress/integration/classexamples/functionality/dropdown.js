@@ -13,11 +13,6 @@
 //         cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
 //         cy.get('#dropdown-class-example').select('Option2')
 //     })
-
-
-
-
-
 // })
 
 
@@ -40,19 +35,19 @@ describe('validate the dropdown functionality', () => {
     //     })
 
     // })
-    // it('valide the functionality of redbus drop down', () => {
-    //     cy.visit('https://www.oyorooms.com/')
-    //     cy.get('#autoComplete__home').type('pune')
-    //     cy.get('.geoSuggestionsList__container').find('div').then(function (ela) {
-    //         Array.from(ela).forEach(function (el) {
-    //             if (el.textContent.includes('Shivaji')) {
-    //                 el.click()
+    it('valide the functionality of redbus drop down', () => {
+        cy.visit('https://www.oyorooms.com/')
+        cy.get('#autoComplete__home').type('pune')
+        cy.get('.geoSuggestionsList__container').find('div').then(function (ela) {
+            Array.from(ela).forEach(function (el) {
+                if (el.textContent.includes('Shivaji')) {
+                    el.click()
 
-    //             }
-    //         })
-    //     })
+                }
+            })
+        })
 
-    // })
+    })
 
 
 
