@@ -1,0 +1,20 @@
+{
+    "body" : {
+        "body": "HI ! I am new in Python",
+                    "skills": "[js,python,mech]"
+
+    },
+
+    "headers" : {
+"myName" : "krishna"
+    },
+
+    "status":{
+        "code":300
+    },
+
+"requestheaders" : { 
+"msg" : "HELLO KRISHNA"
+
+}
+}

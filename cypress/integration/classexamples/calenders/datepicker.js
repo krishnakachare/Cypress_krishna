@@ -5,7 +5,7 @@
 
 describe('validate the past/future date', () => {
 
-      it('select past date', () => {
+      it.only('select past date', () => {
 
             let kk = new Date()
 
