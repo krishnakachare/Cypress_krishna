@@ -80,3 +80,6 @@ describe('Alias and invoke',()=>{
     })
 
 })
+
+
+// variables in cypress

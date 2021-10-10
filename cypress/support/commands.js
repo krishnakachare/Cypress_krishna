@@ -74,7 +74,6 @@
 
 
 // Cypress.Commands.add('dropDown', (C, s, c) => {
-
 //     cy.get('select').first().select(C).then(()=>{
 //         cy.get('select').eq(1).select(s).then(()=>{
 //             cy.get('select').last().select(c)
