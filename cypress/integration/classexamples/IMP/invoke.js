@@ -36,3 +36,59 @@ describe('validate the window based elements', () => {
 
 
 })
+
+
+
+
+
+
+
+
+// describe('handling browser tab switching in cypress', () => {
+//     let hrevalu = "https://www.google.com"
+
+//     it('by removing target attribute', () => {
+//         cy.visit('/')      // we fetch url from cypress.json file
+//         cy.get('#contact-us').invoke('removeAttr','target').click()        // remove attribute
+//         cy.url().should('contain',"Contact-Us") 
+
+//     })
+//     it('Scroll Into view', () => {
+//         cy.visit('/')
+//         cy.get('#contact-us').then(function($input){
+//             $input[0].setAttribute('target', '_self')        // update attribute
+//           })
+//           .should('have.attr', 'target', '_self')
+//         cy.get('#contact-us').click()
+//     })
+
+//     it('second way doing handling tab switching', () => {
+//         cy.visit('/')
+//         cy.get('#contact-us').invoke('attr', 'href').then(function(el){
+//             cy.visit(`/${el}`)                                                 // we add url in our base url 
+//         })                                        // href has  value url
+
+//     })
+
+//     it('setting the value of attribute of html element', () => {
+//         cy.visit('/')
+//         cy.get('#contact-us').then(function($input){
+//             $input[0].setAttribute('href', 'https://www.google.com')
+//           })
+//         //cy.get('#contact-us').invoke('removeAttr','target').click()
+//         cy.get('#contact-us').invoke('attr', 'href').then(function(el){
+//                 expect(el).to.equals(hrevalu)
+//         })
+
+//     })
+
+//     it('Scroll Into view', () => {
+//         cy.visit(hrevalu)
+
+//     })
+
+
+
+
+
+// })

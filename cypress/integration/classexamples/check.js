@@ -5,78 +5,78 @@
 
 
 
-describe("s 1", () => {
-    it("login functionality", () => {
-        cy.visit(" ")
-        cy.get('').type(id)
-        cy.get("").type(passward)
-        cy.get("").click()
-        cy.url().contains()
-    })
-    it("validate table columes", () => {
-        cy.visit(" ")
-        cy.get('').type(id)
-        cy.get("").type(passward)
-        cy.get("").click()
-        cy.get("").find('tbody').find('tr').childrens().then((el) => {
-            expect(el.length).to.eql("expected")
-        })
-    })
-    it("validate table colume email", () => {
-        let arr = ["Actual emails..."]
-        cy.visit(" ")
-        cy.get('').type(id)
-        cy.get("").type(passward)
-        cy.get("").click()
-        cy.get("").then((el) => {
-            Array.from(el).filter((el, ind, array) => {
-                return arr.includes(el.textContent)
-            })
-        }).then((el) => {
-            expect(el.length).to.eql(arr.length)
-        })
-    })
-})
+// describe("s 1", () => {
+//     it("login functionality", () => {
+//         cy.visit(" ")
+//         cy.get('').type(id)
+//         cy.get("").type(passward)
+//         cy.get("").click()
+//         cy.url().contains()
+//     })
+//     it("validate table columes", () => {
+//         cy.visit(" ")
+//         cy.get('').type(id)
+//         cy.get("").type(passward)
+//         cy.get("").click()
+//         cy.get("").find('tbody').find('tr').childrens().then((el) => {
+//             expect(el.length).to.eql("expected")
+//         })
+//     })
+//     it("validate table colume email", () => {
+//         let arr = ["Actual emails..."]
+//         cy.visit(" ")
+//         cy.get('').type(id)
+//         cy.get("").type(passward)
+//         cy.get("").click()
+//         cy.get("").then((el) => {
+//             Array.from(el).filter((el, ind, array) => {
+//                 return arr.includes(el.textContent)
+//             })
+//         }).then((el) => {
+//             expect(el.length).to.eql(arr.length)
+//         })
+//     })
+// })
 
 
 
-/// <reference types = "Cypress"/>
-import login from "../POM/class/page.spec.js"
-describe("s 1", () => {
-    it("login functionality", () => {
-        let log = new login
-        log.visit()
-        log.id(id)
-        log.pass(id)
-        log.click()
-        cy.url().contains()
-    })
-    it("validate table columes", () => {
-        let log = new login
-        log.visit()
-        log.id(id)
-        log.pass(id)
-        log.click()
-        cy.get("").find('tbody').find('tr').childrens().then((el) => {
-            expect(el.length).to.eql("expected")
-        })
-    })
-    it("validate table colume email", () => {
-        let arr = ["Actual emails..."]
-        let log = new login
-        log.visit()
-        log.id(id)
-        log.pass(id)
-        log.click()
-        cy.get("").then((el) => {
-            Array.from(el).filter((el) => {
-                return arr.includes(el.textContent)
-            }).then((el) => {
-                expect(el.length).to.eql(arr.length)
-            })
-        })
-    })
-})
+// /// <reference types = "Cypress"/>
+// import login from "../POM/class/page.spec.js"
+// describe("s 1", () => {
+//     it("login functionality", () => {
+//         let log = new login
+//         log.visit()
+//         log.id(id)
+//         log.pass(id)
+//         log.click()
+//         cy.url().contains()
+//     })
+//     it("validate table columes", () => {
+//         let log = new login
+//         log.visit()
+//         log.id(id)
+//         log.pass(id)
+//         log.click()
+//         cy.get("").find('tbody').find('tr').childrens().then((el) => {
+//             expect(el.length).to.eql("expected")
+//         })
+//     })
+//     it("validate table colume email", () => {
+//         let arr = ["Actual emails..."]
+//         let log = new login
+//         log.visit()
+//         log.id(id)
+//         log.pass(id)
+//         log.click()
+//         cy.get("").then((el) => {
+//             Array.from(el).filter((el) => {
+//                 return arr.includes(el.textContent)
+//             }).then((el) => {
+//                 expect(el.length).to.eql(arr.length)
+//             })
+//         })
+//     })
+// })
 
 
 
@@ -93,11 +93,11 @@ describe("s 1", () => {
 
 
 // my misteks
-  // for (let i = 0; i < arr.length; i++) {
-                //     if (arr[i] == el.textContent) {
-                //         return true
-                //     }
-                //}
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] == el.textContent) {
+//         return true
+//     }
+//}
 
 
 
@@ -111,8 +111,22 @@ describe("s 1", () => {
 
 
 
+// let input = 'Groceries'
+//      input = 'Fruits'
+//     input = 'Vegetables'
+
+// let eq = 0
+// if (input !== 'Fruits') {
+//     eq = input == 'Groceries' ? 2 : 1
+// }
+// console.log(eq)
 
 
+let a = 10
+if(a>9){
+console.log('hello')
+}
+console.log('hi')
 
 
 

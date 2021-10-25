@@ -83,3 +83,76 @@
 
 
 //=================================================================================================================
+
+// Emerson test case
+
+Cypress.Commands.add('neviBar', (input) => {
+    // cy.get('.icon-nav').last().click()
+    // cy.wait(3000)
+    // cy.get('.site-nav').find('li').each((el) => {
+    //     cy.wait(3000)
+    //     if (el.text().includes(input)) {
+    //         cy.log(el.text())
+    //         el.click({ force: true })
+    //     }
+    // }).then(() => {
+
+    // })
+})
+
+
+Cypress.Commands.add('shipping', (data) => {
+    cy.get('#checkout_email_or_phone').type(data.email)
+    cy.get('#checkout_shipping_address_first_name').type(data.firstName)
+    cy.get('#checkout_shipping_address_last_name').type(data.lastName)
+    cy.get('#checkout_shipping_address_address1').type(data.address)
+    cy.get('#checkout_shipping_address_city').type(data.city)
+    cy.get('#checkout_shipping_address_province').select(data.state)
+    cy.get('#checkout_shipping_address_zip').type(data.pincode)
+    cy.get('#checkout_shipping_address_phone').type(data.phoneNumber)
+    cy.get('#continue_button > .btn__content').click({ force: true })
+})
+
+
+//=================================================================================================================
+// Emerson test (sir) assignment = Utility for the Nevigation Bar
+
+Cypress.Commands.add('nBar', (input, subInput) => {
+    let cond = false
+    let eq = 0
+    if (input !== 'Fruits') {
+        eq = input == 'Groceries' ? 2 : 1
+    }
+    cy.intercept({
+        method: 'GET',
+        url: '/search?view=mega'
+    }).as('GET')
+    cy.get('.icon-nav').last().click()
+    cy.wait('@GET')
+    cy.get('.site-nav').last().find('li').as('a')
+    if (input === 'Fruits' || 'Vegetables' || 'Groceries') {
+        cond = true
+        cy.get('@a').find('div').find('div').find('span').each((el) => {
+            if (el.text().includes(input)) {
+                cy.wrap(el).parent('div').parent('div').click({ force: true })
+                cy.get('.site-nav-dropdown').eq(`${eq}`).find('li').find('a').find('span').each((el) => {
+                    if (el.text().includes(subInput)) {
+                        cy.wrap(el).click()
+                    }
+                })
+            }
+        })
+    }
+    cy.get('@a').find('a').find('span').each((el) => {
+        if (el.text().includes(input)) {
+            el.click()
+        }
+    })
+    let value = cond = false ? subInput : input
+    value = value.slice(-4)
+    let validate = input === "Home" ? '/' : value
+    let validation = input === "Blog" ? 'news' : validate
+    cy.url().should('contain', validation)
+    // cy.get('.bd-title').should('contain', validate)
+})
+//================================================================================================================
