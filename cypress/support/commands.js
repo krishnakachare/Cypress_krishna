@@ -82,6 +82,23 @@
 // })
 
 
+
+Cypress.Commands.add('dropDown', (Country, state, city) => {
+    cy.get('select').first().select(Country).then((allStates)=>{
+        cy.wrap(allStates).each((statelist)=>{
+            cy.log(statelist)
+        })
+        cy.get('select').eq(1).select(state).then((allCity)=>{
+            cy.wrap(allCity).each((citylist)=>{
+                cy.log(citylist)
+            })
+            cy.get('select').last().select(city)
+        })
+    })   
+})
+
+
+
 //=================================================================================================================
 
 // Emerson test case
