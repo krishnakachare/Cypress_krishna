@@ -91,30 +91,30 @@ describe('validate end to end testing', () => {
                         cy.get('#product-add-to-cart').last().click()
                         cy.contains('Go to cart').click()
 
-                        cy.wait(4000)
-                        cy.get('.ui-datepicker-calendar').find('tbody').find('tr').find('td').find('a').each((el)=>{
-                            cy.log(el.text())
-                        })
+                        }    cy.wait(20000)
+                    //     cy.get('.ui-datepicker-calendar').find('tbody').find('tr').find('td').find('a').each((el)=>{
+                    //         cy.log(el.text())
+                    //     })
                    
                         
-                        // cy.contains('Buy it now').click()
-                        cy.wait(2000)
+                    //     // cy.contains('Buy it now').click()
+                    //     cy.wait(2000)
                         
-                        cy.fixture('emerson').then(function (data) {
-                            cy.get('#checkout_email_or_phone').type(data.email)
-                            cy.get('#checkout_shipping_address_first_name').type(data.firstName)
-                            cy.get('#checkout_shipping_address_last_name').type(data.lastName)
-                            cy.get('#checkout_shipping_address_address1').type(data.address)
-                            cy.get('#checkout_shipping_address_city').type(data.city)
-                            cy.get('#checkout_shipping_address_province').select(data.state)
-                            cy.get('#checkout_shipping_address_zip').type(data.pincode)
-                            cy.get('#checkout_shipping_address_phone').type(data.phoneNumber)
-                            cy.get('#continue_button').click()
-                        })
-                        cy.get('.notice__text').invoke('text')
-                    } else {
-                        cy.log(`Given ${t} to ${tt} cost range ${product} is not available`)
-                    }
+                    //     cy.fixture('emerson').then(function (data) {
+                    //         cy.get('#checkout_email_or_phone').type(data.email)
+                    //         cy.get('#checkout_shipping_address_first_name').type(data.firstName)
+                    //         cy.get('#checkout_shipping_address_last_name').type(data.lastName)
+                    //         cy.get('#checkout_shipping_address_address1').type(data.address)
+                    //         cy.get('#checkout_shipping_address_city').type(data.city)
+                    //         cy.get('#checkout_shipping_address_province').select(data.state)
+                    //         cy.get('#checkout_shipping_address_zip').type(data.pincode)
+                    //         cy.get('#checkout_shipping_address_phone').type(data.phoneNumber)
+                    //         cy.get('#continue_button').click()
+                    //     })
+                    //     cy.get('.notice__text').invoke('text')
+                    // } else {
+                    //     cy.log(`Given ${t} to ${tt} cost range ${product} is not available`)
+                    // }
 
                 })
             }
